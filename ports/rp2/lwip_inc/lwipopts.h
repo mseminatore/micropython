@@ -11,8 +11,16 @@
 
 #define LWIP_RAND() rosc_random_u32()
 
+#define LWIP_MDNS_RESPONDER 0
+
 // Include common lwIP configuration.
 #include "extmod/lwip-include/lwipopts_common.h"
+
+// #ifdef LWIP_MDNS_RESPONDER
+// #undef LWIP_MDNS_RESPONDER
+// #endif
+
+// #define LWIP_MDNS_RESPONDER 0
 
 extern uint32_t rosc_random_u32(void);
 
